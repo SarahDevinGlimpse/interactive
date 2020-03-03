@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<style>
+	img {
+		display: block;
+		margin-left: auto;
+		margin-right: auto;
+		width: 50%;
+	}
+	body {
+		margin: 10px;
+		font-family: Gill Sans, Gill Sans MT, Calibri, sans-serif;
+	}
+	div {
+		font-size: 20px;
+	}
+
+	p {
+		font-size: 50px;
+	}
+
+	.cover {
+		background-color:white;
+		position: absolute;
+		top: 240px;
+		left: 270px;
+		width: 700px;
+		height:1000px;
+	}
+
+	
+</style>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<body>
+		<div>
+			<label for="times"> Choose a unit of time: </label>
+			<select id="times">
+				<option value="Netflix">One episode of your current Netflix obsession</option>
+				<option value="Facetime">One meaningful FaceTime conversation with your Mom</option>
+				<option value="Book">One chapter of the book you've been trying to finish for two months</option>
+			</select>
+		</div>
+
+		<p>Since you opened this website you could've...</p>
+		<p>Watched X episodes of "I Am Not Okay With This"
+		<img src="netflixlogo.jpeg" alt="netflix" width="500">
+		<div class="cover" style="height:1000;">
+		</div>
+		<script>
+			var seconds = 0
+
+			function increment () {
+				seconds = seconds + 1;
+				console.log(seconds);
+				stretch();
+			}
+
+			function stretch() {
+				$(".cover").animate(
+				{
+					height: 1000/seconds +"px"
+				},
+				1000
+				);
+			}
+			
+			$(document).ready(function() {
+				var start = setInterval(increment,1000);
+			});
+		</script>
+	</body>
+
+
+
+</html>
