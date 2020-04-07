@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+		<script>
+			function getOption() {
+				var obj = document.getElementById("times");
+				document.getElementById("demo").innerHTML = "You have chosen " + obj.options[obj.selectedIndex].text;
+				}
+					
+				$(document).ready(function() {
+			});
+		</script>
+	</head>
+
+	<body>
+		<form>
+			<select id="times">
+				<option value="Netflix">one episode of your current Netflix obsession</option>
+				<option value="Facetime">one meaningful FaceTime conversation with your Mom</option>
+				<option value="Book">One chapter of the book you've been trying to finish for two months</option>
+			</select>
+		
+		<br><br>
+		<input type="button" onclick="getOption()" value="sumbit">
+		</form>
+
+		<p id="demo"></p>
+			
+	</body>
+</html>

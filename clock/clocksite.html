@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title> Tick Tock....</title>
+	</head>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<body>
+		<h1> What could you have been doing? </h1>
+		<form>
+			<label> Select unit of time: </label>
+			<select class ="unit" onchange="counterFunction()">
+				<option value="1">Bake a loaf of the savory zucchini bread recipe you found on a vegan mom blog</option>
+				<option value="2">Do last week’s reading</option>
+				<option value="3">Make your at-home Starbucks chai alternative to curb your crippling caffeine addiction </option>
+				<option value="4">Pick and sell all of the fruit on your island in exchange for those sweet, sweet fictional bells</option>
+				<option value="5">Rinse, chop, season, and roast some vegetables to help your mom out with dinner </option>
+				<option value="6">Eat the vegetables so your mom’s not disappointed in you</option>
+				<option value="7">Make your bed  </option>
+				<option value="8">Take a nap in your bed and ruin all of your hard work </option>
+				<option value="9">Do your laundry  </option>
+				<option value="10">Change out of the sweatpants you’ve been wearing for… um… too long, definitely</option>
+				<option value="11">Take a shower so your zoom class can’t see how gross your hair is </option>
+				<option value="12">Listen to every song on The Family Jewels by Marina and the Diamonds, just to feel alive (and because it slaps)  </option>
+			</select>
+		</form>
+		<p id ="choice"></p>
+		<p id ="count"></p>
+
+		<script>
+			var seconds = 0
+			var counter = 0
+			var unit = 0
+			var unit1 = 9000
+			var unit2 = 1800
+			var unit3 = 135
+			var unit4 = 2700
+			var unit5 = 3600
+			var unit6 = 300
+			var unit7 = 600
+			var unit8 = 1800
+			var unit9 = 10800
+			var unit10 = 30
+			var unit11 = 900
+			var unit12 = 2640
+
+
+			function increment () {
+				seconds = seconds + 1;
+				if (seconds == unit) {
+					counter = counter + 1;
+					seconds = 0;
+				}
+				document.getElementById("count").innerHTML = "You could have done this " + counter + " times"
+
+				console.log(counter, seconds);
+			}
+
+			function counterFunction() {
+				seconds = 0;
+				counter = 0;
+			}
+
+			$(document).ready(function() {
+				$("select.unit").change(function(){
+					var selectedUnitText = $(this).children("option:selected").text();
+					document.getElementById("choice").innerHTML = "You have selected: " + selectedUnitText;
+					var selectedUnit = $(this).children("option:selected").val();
+
+
+					if (selectedUnit == "1"){
+						unit = unit1;
+					}
+					if (selectedUnit == "2"){
+						unit = unit2;
+					}
+					if (selectedUnit == "3"){
+						unit = unit3;
+					}
+					if (selectedUnit == "4"){
+						unit = unit4;
+					} 
+					if (selectedUnit == "5"){
+						unit = unit5;
+					} 
+					if (selectedUnit == "6"){
+						unit = unit6;
+					} 
+					if (selectedUnit == "7"){
+						unit = unit7;
+					} 
+					if (selectedUnit == "8"){
+						unit = unit8;
+					} 
+					if (selectedUnit == "9"){
+						unit = unit9;
+					} 
+					if (selectedUnit == "10"){
+						unit = unit10;
+					} 
+					if (selectedUnit == "11"){
+						unit = unit11;
+					} 
+					if (selectedUnit == "12"){
+						unit = unit12;
+					} 
+				
+
+
+				})
+				var start = setInterval(increment,1000);
+				increment();
+			})
+		</script>
+	</body>
+</html>
