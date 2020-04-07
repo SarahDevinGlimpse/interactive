@@ -4,15 +4,111 @@
 		<title> Tick Tock....</title>
 	</head>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<style>
+
+		body{
+			margin: 12px;
+			font-family: Gill Sans, Gill Sans MT, Calibri, sans-serif;
+		}
+		.pic1 {
+			animation-name: appear;
+			animation-duration: 9000s;
+			position: absolute;
+			opacity:0.5;
+
+
+			}
+		.pic2 {
+			animation-name: appear;
+			animation-duration: 1800s;
+			position: absolute;
+
+			}
+		.pic3 {
+			animation-name: appear;
+			animation-duration: 135s;
+			position: absolute;
+
+			}
+		.pic4 {
+			animation-name: appear;
+			animation-duration: 2700s;
+			position: absolute;
+
+			}
+		.pic5 {
+			animation-name: appear;
+			animation-duration: 3600s;
+			position: absolute;
+
+			}
+		.pic6 {
+			animation-name: appear;
+			animation-duration: 300s;
+			position: absolute;
+
+			}
+		.pic7 {
+			animation-name: appear;
+			animation-duration: 600s;
+			position: absolute;
+
+			}
+		.pic8 {
+			animation-name: appear;
+			animation-duration: 1800s;
+			position: absolute;
+
+			}
+		.pic9 {
+			animation-name: appear;
+			animation-duration: 10800s;
+			position: absolute;
+
+			}
+		.pic10 {
+			animation-name: appear;
+			animation-duration: 30s;
+			position: absolute;
+
+			}
+		.pic11 {
+			animation-name: appear;
+			animation-duration: 900s;
+			position: absolute;
+
+			}
+		.pic12 {
+			animation-name: appear;
+			animation-duration: 2640s;
+			position: absolute;
+
+			}
+		
+			
+
+		#count {
+		}
+
+		@keyframes appear {
+			0%{
+				opacity:0;
+			}
+			100%{
+				opacity:1;
+			}
+		}
+	</style>
 	<body>
-		<h1> What could you have been doing? </h1>
+		<h1> What could I have been doing? </h1>
 		<form>
 			<label> Select unit of time: </label>
 			<select class ="unit" onchange="counterFunction()">
+				<option value="0"></option>
 				<option value="1">Bake a loaf of the savory zucchini bread recipe you found on a vegan mom blog</option>
 				<option value="2">Do last week’s reading</option>
 				<option value="3">Make your at-home Starbucks chai alternative to curb your crippling caffeine addiction </option>
-				<option value="4">Pick and sell all of the fruit on your island in exchange for those sweet, sweet fictional bells</option>
+				<option value="4">Pick and sell all of the fruit on your island in exchange for those sweet, sweet  bells</option>
 				<option value="5">Rinse, chop, season, and roast some vegetables to help your mom out with dinner </option>
 				<option value="6">Eat the vegetables so your mom’s not disappointed in you</option>
 				<option value="7">Make your bed  </option>
@@ -23,13 +119,33 @@
 				<option value="12">Listen to every song on The Family Jewels by Marina and the Diamonds, just to feel alive (and because it slaps)  </option>
 			</select>
 		</form>
-		<p id ="choice"></p>
+		<p></p>
+		<img src="clock/clockiconimgs/unit1.png" alt="bread" width="58" align="center" id="pic">
+		<img src="clock/clockiconimgs/unit2.png" alt="unit 2" width="58" align="center" class="pic">
+		<img src="clock/clockiconimgs/unit3.png" alt="unit 3" width="58" align="center" class="pic">
+		<img src="clock/clockiconimgs/unit4.png" alt="unit 4" width="58" align="center" class="pic">
+		<img src="clock/clockiconimgs/unit5.png" alt="unit 5" width="58" align="center" class="pic">
+		<img src="clock/clockiconimgs/unit6.png" alt="unit 6" width="58" align="center" class="pic">
+		<img src="clock/clockiconimgs/unit7.png" alt="unit 7" width="58" align="center" class="pic">
+		<img src="clock/clockiconimgs/unit8.png" alt="unit 8" width="58" align="center" class="pic">
+		<img src="clock/clockiconimgs/unit9.png" alt="unit 9" width="58" align="center" class="pic">
+		<img src="clock/clockiconimgs/unit10.png" alt="unit 10" width="58" align="center" class="pic">
+		<img src="clock/clockiconimgs/unit11.png" alt="unit 11" width="58" align="center" class="pic">
+		<img src="clock/clockiconimgs/unit12.png" alt="unit 12" width="58" align="center" class="pic">
+
+		<p id ="choice">You have selected: </p>
 		<p id ="count"></p>
+
+		<div id="imgDiv"> </div>
+
+		
+
 
 		<script>
 			var seconds = 0
 			var counter = 0
 			var unit = 0
+			var progress = 0
 			var unit1 = 9000
 			var unit2 = 1800
 			var unit3 = 135
@@ -43,17 +159,19 @@
 			var unit11 = 900
 			var unit12 = 2640
 
-
 			function increment () {
 				seconds = seconds + 1;
+				
 				if (seconds == unit) {
 					counter = counter + 1;
 					seconds = 0;
 				}
-				document.getElementById("count").innerHTML = "You could have done this " + counter + " times"
+
+				document.getElementById("count").innerHTML = "You could have done this " + counter + " times";
 
 				console.log(counter, seconds);
 			}
+
 
 			function counterFunction() {
 				seconds = 0;
@@ -61,17 +179,21 @@
 			}
 
 			$(document).ready(function() {
+
 				$("select.unit").change(function(){
 					var selectedUnitText = $(this).children("option:selected").text();
 					document.getElementById("choice").innerHTML = "You have selected: " + selectedUnitText;
 					var selectedUnit = $(this).children("option:selected").val();
 
 
+
 					if (selectedUnit == "1"){
 						unit = unit1;
+						$('#imgDiv').prepend('<img src="clock/clockiconimgs/unit1.png" alt="unit 1" width="300" align="center" class="pic1">')
 					}
 					if (selectedUnit == "2"){
 						unit = unit2;
+						$('#imgDiv').prepend('<img src="clock/clockiconimgs/unit2.png" alt="unit 2" width="300" align="center" class="pic2">')
 					}
 					if (selectedUnit == "3"){
 						unit = unit3;
