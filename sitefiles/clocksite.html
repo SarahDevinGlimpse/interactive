@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title> Tick Tock....</title>
+		<title> Tick Tock...</title>
 	</head>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 	<style>
@@ -10,81 +10,6 @@
 			margin: 12px;
 			font-family: Gill Sans, Gill Sans MT, Calibri, sans-serif;
 		}
-		.pic1 {
-			animation-name: appear;
-			animation-duration: 9000s;
-			position: absolute;
-			opacity:0.5;
-
-
-			}
-		.pic2 {
-			animation-name: appear;
-			animation-duration: 1800s;
-			position: absolute;
-
-			}
-		.pic3 {
-			animation-name: appear;
-			animation-duration: 135s;
-			position: absolute;
-
-			}
-		.pic4 {
-			animation-name: appear;
-			animation-duration: 2700s;
-			position: absolute;
-
-			}
-		.pic5 {
-			animation-name: appear;
-			animation-duration: 3600s;
-			position: absolute;
-
-			}
-		.pic6 {
-			animation-name: appear;
-			animation-duration: 300s;
-			position: absolute;
-
-			}
-		.pic7 {
-			animation-name: appear;
-			animation-duration: 600s;
-			position: absolute;
-
-			}
-		.pic8 {
-			animation-name: appear;
-			animation-duration: 1800s;
-			position: absolute;
-
-			}
-		.pic9 {
-			animation-name: appear;
-			animation-duration: 10800s;
-			position: absolute;
-
-			}
-		.pic10 {
-			animation-name: appear;
-			animation-duration: 30s;
-			position: absolute;
-
-			}
-		.pic11 {
-			animation-name: appear;
-			animation-duration: 900s;
-			position: absolute;
-
-			}
-		.pic12 {
-			animation-name: appear;
-			animation-duration: 2640s;
-			position: absolute;
-
-			}
-		
 			
 
 		#count {
@@ -121,17 +46,17 @@
 		</form>
 		<p></p>
 		<img src="clock/clockiconimgs/unit1.png" alt="bread" width="58" align="center" id="pic">
-		<img src="clock/clockiconimgs/unit2.png" alt="unit 2" width="58" align="center" class="pic">
-		<img src="clock/clockiconimgs/unit3.png" alt="unit 3" width="58" align="center" class="pic">
-		<img src="clock/clockiconimgs/unit4.png" alt="unit 4" width="58" align="center" class="pic">
-		<img src="clock/clockiconimgs/unit5.png" alt="unit 5" width="58" align="center" class="pic">
-		<img src="clock/clockiconimgs/unit6.png" alt="unit 6" width="58" align="center" class="pic">
-		<img src="clock/clockiconimgs/unit7.png" alt="unit 7" width="58" align="center" class="pic">
-		<img src="clock/clockiconimgs/unit8.png" alt="unit 8" width="58" align="center" class="pic">
-		<img src="clock/clockiconimgs/unit9.png" alt="unit 9" width="58" align="center" class="pic">
-		<img src="clock/clockiconimgs/unit10.png" alt="unit 10" width="58" align="center" class="pic">
-		<img src="clock/clockiconimgs/unit11.png" alt="unit 11" width="58" align="center" class="pic">
-		<img src="clock/clockiconimgs/unit12.png" alt="unit 12" width="58" align="center" class="pic">
+		<img src="clock/clockiconimgs/Unit2.png" alt="unit 2" width="58" align="center" class="pic">
+		<img src="clock/clockiconimgs/Unit3.png" alt="unit 3" width="58" align="center" class="pic">
+		<img src="clock/clockiconimgs/Unit4.png" alt="unit 4" width="58" align="center" class="pic">
+		<img src="clock/clockiconimgs/Unit5.png" alt="unit 5" width="58" align="center" class="pic">
+		<img src="clock/clockiconimgs/Unit6.png" alt="unit 6" width="58" align="center" class="pic">
+		<img src="clock/clockiconimgs/Unit7.png" alt="unit 7" width="58" align="center" class="pic">
+		<img src="clock/clockiconimgs/Unit8.png" alt="unit 8" width="58" align="center" class="pic">
+		<img src="clock/clockiconimgs/Unit9.png" alt="unit 9" width="58" align="center" class="pic">
+		<img src="clock/clockiconimgs/Unit10.png" alt="unit 10" width="58" align="center" class="pic">
+		<img src="clock/clockiconimgs/Unit11.png" alt="unit 11" width="58" align="center" class="pic">
+		<img src="clock/clockiconimgs/Unit12.png" alt="unit 12" width="58" align="center" class="pic">
 
 		<p id ="choice">You have selected: </p>
 		<p id ="count"></p>
@@ -167,7 +92,7 @@
 					seconds = 0;
 				}
 
-				document.getElementById("count").innerHTML = "You could have done this " + counter + " times";
+				document.getElementById("count").innerHTML = "In " + seconds +"s you could have done this " + counter + " times";
 
 				console.log(counter, seconds);
 			}

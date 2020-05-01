@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<title> Portfolio </title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<style>
+		body {
+			background-color: black;
+		}
+
+		#section1 {
+			background-image: url("onebg.png");
+			background-size: contain;
+			background-repeat: no-repeat;
+			background-position: bottom;
+			position: absolute;
+			top:0px;
+			left:0px;
+			width: 1200px;
+			height: 700px;
+		}
+		#section1b {
+			background-image: url("onebbg.png");
+			background-size: contain;
+			background-repeat: no-repeat;
+			background-position: bottom;
+			position: absolute;
+			top: 0px;
+			left: 1200px;
+			width: 800px;
+			height: 700px;
+		}
+
+
+		#section2 {
+			background-image: url("twobg.png");
+			background-size: contain;
+			background-repeat: no-repeat;
+			background-position: bottom;
+			position: absolute;
+			top:0px;
+			left:2000px;
+			width: 1200px;
+			height: 700px;
+		}
+
+		#section2b {
+			background-image: url("twobbg.png");
+			background-size: contain;
+			background-repeat: no-repeat;
+			background-position: 0px 420px;
+			position: absolute;
+			top: 0px;
+			left: 3200px;
+			width: 800px;
+			height: 700px;
+		}
+
+		#section3 {
+			background-image: url("threebg.png");
+			background-size: contain;
+			background-repeat: no-repeat;
+			background-position: left;
+			position: absolute;
+			top:0px;
+			left:4000px;
+			width: 1200px;
+			height: 700px;
+		}
+
+		#section4b {
+			background-image: url("fourbbg.png");
+			background-size: contain;
+			background-repeat: no-repeat;
+			background-position: 500px 0px;
+			position: absolute;
+			top: 700px;
+			left: 2000px;
+			width: 1200px;
+			height: 500px;
+		}
+
+		#section4 {
+			background-image: url("fourbg.png");
+			background-size: contain;
+			background-repeat: no-repeat;
+			background-position: top;
+			position: absolute;
+			top: 1200px;
+			left: 2000px;
+			width: 1200px;
+			height: 700px;
+		}
+
+		div.gallery {
+			margin: 20px;
+			float: left;
+			width: 300px;
+		}
+
+
+		div.gallery img {
+			width: 100%;
+			height: auto;
+		}
+
+		div.desc {
+			padding: 15px;
+			background-color: black;
+			font-size: 8px;
+			text-align: center;
+			color: white;
+			font-family: monospace;
+		}
+
+		.btn {
+			position: absolute;
+			top: 20%;
+			left: 40%;
+			background-color: transparent;
+			border: none;
+			cursor: pointer;
+			padding: 15px 50px;
+		}
+		.btn2 {
+			position: absolute;
+			top: 32%;
+			left: 41%;
+			background-color: transparent;
+			border: none;
+			cursor: pointer;
+			padding: 15px 50px;
+		}
+
+		.btn3 {
+			position: absolute;
+			top: 43%;
+			left: 41%;
+			background-color: transparent;
+			border: none;
+			cursor: pointer;
+			padding: 20px 50px;
+		}
+
+	</style>
+	</head>
+	<body>
+
+		<div id="section1">
+			<div class="gallery">
+				<img src="astro.jpg" alt="astro" style="width:100%">
+				<div class="desc">Astro Girls</div>
+			</div>
+			<div class="gallery">
+				<img src="chars.jpg" alt="chars" style="width:100%">
+				<div class="desc">Roanoake Character Designs</div>
+			</div>
+			<div class="gallery">
+				<img src="props.png" alt="props" style="width:100%">
+				<div class="desc">Roanoke Prop Designs</div>
+			</div>
+		</div>
+		<div id="section1b">
+		</div>
+		<div id="section2">
+			<div>
+				<button onclick="moveFunctionAnim()" class="btn"></button>
+				<button onclick="moveFunctionAnim()" class="btn2"></button>
+				<button onclick="moveFunctionAnim()" class="btn3"></button>
+			</div>
+		</div>
+		<div id="section2b">
+		</div>
+		<div id="section3">
+			<div class="gallery">
+				<video width="300" controls>
+			   		<source src="demoreelsmall.mov" type="video/mp4">
+			   	</video>
+				<div class="desc">Demo Reel</div>
+			</div>
+
+			<div class="gallery">
+				<video width="300" controls>
+					<source src="pumpkinpie.mov" type="video/mp4">
+				</video>
+			 	<div class="desc">"Pumpkin Pie"</div>
+			</div>
+
+			<div class="gallery">
+				<video width="300" controls>
+					<source src="finalfilm.mp4" type="video/mp4">
+				</video>
+			  	<div class="desc">"Autoimmune"</div>
+			</div>
+
+		<br>
+
+			<div class="gallery" align="center">
+				<video width="155" controls>
+					<source src="fabric.mp4" type="video/mp4">
+				</video>
+				<div class="desc">Fabric Study</div>
+			</div>
+
+			<div class="gallery">
+				<img src="muertos.gif" alt="Ghosts" width="300">
+				<div class="desc">"Ghosts"</div>
+			</div>
+
+			<div class="gallery">
+				<img src="jump.gif" alt="Damsel" width="300">
+		 		<div class="desc">"Damsel"</div>
+			</div>
+		</div>
+		</div>
+		<div id="section4b">
+		</div>
+		<div id="section4">
+			<div class="gallery">
+				<img src="teeth.jpeg" alt="teeth" style="width:100%">
+				<div class="desc">Self Portrait 1</div>
+			</div>
+			<div class="gallery">
+				<img src="bumble.jpeg" alt="bee" style="width:100%">
+				<div class="desc">Self Portrait 2</div>
+			</div>
+			<div class="gallery">
+				<img src="hands.jpeg" alt="hands" style="width:100%">
+				<div class="desc">Hands Study</div>
+			</div>
+		
+		</div>
+		<script>
+		function moveFunctionAnim() {
+			console.log("hello");
+			window.scrollTo(0,0);
+		}
+		
+	</script>
+	</body>
+
+
+</html>
